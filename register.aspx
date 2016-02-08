@@ -42,8 +42,8 @@
                 <asp:Label runat="server" ID="labelGender">Gender:</asp:Label>
                 <br />
                 <asp:RadioButtonList runat="server" ID="inputGender">
-                    <asp:ListItem>Male</asp:ListItem>
-                    <asp:ListItem>Female</asp:ListItem>
+                    <asp:ListItem Value="Male">Male</asp:ListItem>
+                    <asp:ListItem Value="Female">Female</asp:ListItem>
                 </asp:RadioButtonList>
                 <asp:RequiredFieldValidator runat="server" ID="reqGender" ControlToValidate="inputGender" ErrorMessage="* Please select a gender." />
                 <br />

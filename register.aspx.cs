@@ -23,18 +23,15 @@ public partial class Register : System.Web.UI.Page
         Session["userPassword"] = inputPassword.Text;
         Session["firstName"] = inputFirstName.Text;
         Session["lastName"] = inputLastName.Text;
-
-        Session["gender"] = inputGender.Text;
-
+        Session["gender"] = inputGender.SelectedValue;
         Session["dob"] = inputDOB.Text;
-        Session["phonenumber"] = inputPhone.Text;
+        Session["phoneNumber"] = inputPhone.Text;
         Session["streetAddress"] = inputStreetAddress.Text;
         Session["city"] = inputCity.Text;
-        Session["p/s"] = inputState.Text;
+        Session["state"] = inputState.Text;
         Session["country"] = inputCountry.Text;
         Session["zip"] = inputZip.Text;
         
-
         Server.Transfer("terms.aspx");
     }
 }
