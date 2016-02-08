@@ -34,7 +34,9 @@
                 </asp:Label>
                 <br /><br />
 
-                <textarea runat="server" id="textArea" maxlength="250" cols="40" rows="7" style="resize:none" ></textarea>
+                <asp:Label runat="server" ID="labelMessageUser">Post Message on User's wall:</asp:Label>
+                <br />
+                <textarea runat="server" id="textArea" maxlength="150" cols="40" rows="4" style="resize:none" ></textarea>
                 <br />
 
                 <asp:Button runat="server" ID="buttonBack" Text="Back" OnClick="onClick_back" />
