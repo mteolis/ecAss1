@@ -9,7 +9,7 @@
     <body>
         <form id="form1" runat="server">
             <div>
-    
+                <asp:Label runat="server" ID="labelVanierFaces">Vanier Faces</asp:Label>
             </div>
         </form>
     </body>
