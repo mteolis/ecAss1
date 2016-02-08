@@ -11,4 +11,19 @@ public partial class user : System.Web.UI.Page
     {
 
     }
+
+    protected void onClick_back(object sender, EventArgs e)
+    {
+        Server.Transfer("main.aspx");
+    }
+
+    protected void onClick_clear(object sender, EventArgs e)
+    {
+        textArea.Value = "";
+    }
+
+    protected void onClick_post(object sender, EventArgs e)
+    {
+
+    }
 }
