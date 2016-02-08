@@ -93,7 +93,7 @@
                 <br />
                 <asp:RegularExpressionValidator runat="server" ID="regInputZip" ControlToValidate="inputZip" ValidationExpression="(^\d{5}(-\d{4})?$)|(^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$)" ErrorMessage="* Please enter a valid Zip/Postal code (case-sensitive)." />
                 <br /><br />
-                
+         
                 <asp:Button runat="server" ID="buttonCancel" Text="Cancel" OnClick="onClick_cancel" CausesValidation="false" />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 <asp:Button runat="server" ID="buttonNext" Text="Next" OnClick="onClick_next" />

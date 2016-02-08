@@ -20,6 +20,9 @@
                 <asp:Button runat="server" ID="buttonDecline" Text="Decline" OnClick="onClick_decline" />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                 <asp:Button runat="server" ID="buttonAccept" Text="Accept" OnClick="onClick_accept" />
+                <br />
+                <br />
+                <br />
             </div>
         </form>
     </body>
