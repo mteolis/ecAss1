@@ -11,4 +11,14 @@ public partial class myprofile : System.Web.UI.Page
     {
         this.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
     }
+
+    protected void onClick_cancel(object sender, EventArgs e)
+    {
+        Server.Transfer("main.aspx");
+    }
+
+    protected void onClick_save(object sender, EventArgs e)
+    {
+
+    }
 }
