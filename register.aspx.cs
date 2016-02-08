@@ -20,19 +20,19 @@ public partial class Register : System.Web.UI.Page
     protected void onClick_next(object sender, EventArgs e)
     {
         Session["userName"] = inputUsername.Text;
-        Session["userPassword"] = inputUsername.Text;
-        Session["firstName"] = inputUsername.Text;
-        Session["lastName"] = inputUsername.Text;
+        Session["userPassword"] = inputPassword.Text;
+        Session["firstName"] = inputFirstName.Text;
+        Session["lastName"] = inputLastName.Text;
 
-        Session["gender"] = inputUsername.Text;
+        Session["gender"] = inputGender.Text;
 
-        Session["dob"] = inputUsername.Text;
-        Session["phonenumber"] = inputUsername.Text;
-        Session["streetAddress"] = inputUsername.Text;
-        Session["city"] = inputUsername.Text;
-        Session["p/s"] = inputUsername.Text;
-        Session["country"] = inputUsername.Text;
-        Session["zip"] = inputUsername.Text;
+        Session["dob"] = inputDOB.Text;
+        Session["phonenumber"] = inputPhone.Text;
+        Session["streetAddress"] = inputStreetAddress.Text;
+        Session["city"] = inputCity.Text;
+        Session["p/s"] = inputState.Text;
+        Session["country"] = inputCountry.Text;
+        Session["zip"] = inputZip.Text;
         
 
         Server.Transfer("terms.aspx");
