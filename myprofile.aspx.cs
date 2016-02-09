@@ -21,6 +21,11 @@ public partial class myprofile : System.Web.UI.Page
 
         this.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
 
+<<<<<<< HEAD
+
+        
+=======
+>>>>>>> fetch_head
         string strSQL = null;
         strSQL = "SELECT user_name, user_password, first_name, last_name, gender, dob, street_address, province, country, zip FROM tblProfiles WHERE user_name = '" + username + "';";
         connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + System.Web.HttpContext.Current.Server.MapPath("VanierFaces.accdb") + ";Persist Security Info=False;");
@@ -82,11 +87,21 @@ public partial class myprofile : System.Web.UI.Page
     {
         OleDbDataReader reader;
         string strSQL = null;
+<<<<<<< HEAD
         strSQL = "SELECT user_name, user_password, first_name, last_name, gender, dob, street_address, province, country, zip FROM tblProfiles WHERE user_name = '" + username + "';";
 
         cmd = new OleDbCommand(strSQL, connection);
 
         reader = cmd.ExecuteReader();
+=======
+        strSQL = "SELECT user_name, user_password, first_name, last_name, gender, dob, street_address, province, country FROM tblProfiles WHERE user_name ='Randolph'";
+<<<<<<< HEAD
+        myCommand = new OleDbCommand(strSQL , myConnection);
+=======
+        myCommand = new OleDbCommand(strSQL, myConnection);
+>>>>>>> fetch_head
+        reader = myCommand.ExecuteReader();
+>>>>>>> 4edab2dc1edd2ff8c57892ba8bdd2d6de3772f07
         while (reader.Read())
         {
             inputPassword.Text = reader[1].ToString();

@@ -22,9 +22,12 @@ public partial class main : System.Web.UI.Page
     {
         this.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
 
+<<<<<<< HEAD
+=======
         connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Server.MapPath("VanierFaces.accdb") + ";Persist Security Info=False;";
         path = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Server.MapPath("VanierFaces.accdb") + ";Persist Security Info=False;";
 
+>>>>>>> fetch_head
         OleDbConnection myConnection = default(OleDbConnection);
         OleDbCommand myCommand = default(OleDbCommand);
         string strSQL = null;
