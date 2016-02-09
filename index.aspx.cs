@@ -20,6 +20,9 @@ public partial class index : System.Web.UI.Page
 
         connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Server.MapPath("VanierFaces.accdb") + ";Persist Security Info=False;";
         path = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Server.MapPath("VanierFaces.accdb") + ";Persist Security Info=False;";
+
+        errorUsername.Visible = false;
+        errorPassword.Visible = false;
     }
 
     protected void onClick_register(object sender, EventArgs e)
@@ -54,9 +57,9 @@ public partial class index : System.Web.UI.Page
                 Server.Transfer("main.aspx");
             }
             else
-                Response.Write("invalid password.");
+                errorPassword.Visible = true;
         }
         else
-            Response.Write("invalid username.");
+            errorUsername.Visible = true;
     }
 }

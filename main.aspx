@@ -15,21 +15,13 @@
                 <asp:Label runat="server" ID="labelMain" Font-Bold="true" Font-Size="X-Large">Main</asp:Label>
                 <br /><br />
 
-                <asp:Button runat="server" ID="buttonProfile" Text="Profile" OnClick="onClick_profile" />
+                <asp:Button runat="server" ID="buttonProfile" Text="Profile" CausesValidation="false" OnClick="onClick_profile" />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                <asp:Button runat="server" ID="buttonLogout" Text="Logout" OnClick="onClick_logout" />
+                <asp:Button runat="server" ID="buttonLogout" Text="Logout" CausesValidation="false" OnClick="onClick_logout" />
                 <br /><br />
 
                 <asp:Label runat="server" ID="labelProfileList">Profile List</asp:Label>
                 <br />
-                <asp:BulletedList runat="server" ID="listProfiles" Style="list-style-type:none;" Width="180px">
-                    <asp:ListItem Value="user1"></asp:ListItem>
-                    <asp:ListItem Value="dwa"></asp:ListItem>
-                    <asp:ListItem Value="useasdr1"></asp:ListItem>
-                    <asp:ListItem Value="dwaaa"></asp:ListItem>
-                    <asp:ListItem Value="vxdv"></asp:ListItem>
-                    <asp:ListItem Value="user1"></asp:ListItem>
-                </asp:BulletedList>
             </div>
             <asp:GridView ID="GridViewProfile" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="66px" Width="1264px">
                 <AlternatingRowStyle BackColor="#CCCCCC" />
@@ -42,6 +34,16 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
+            <br />
+
+            <asp:Label runat="server" ID="labelUserProfileView">Enter user whose profile you wish to view:</asp:Label> 
+            <br />
+            <asp:TextBox runat="server" ID="inputUserNavigation"></asp:TextBox>
+            <asp:Button runat="server" ID="buttonNavigate" Text="View Profile" OnClick="onClick_navigate" />
+            <br />
+            <asp:RequiredFieldValidator runat="server" ID="reqUserNavigation" ControlToValidate="inputUserNavigation" ErrorMessage="* Please enter a username." />
+            <br />
+            <asp:Label runat="server" ID="errorUserNotFound">* Invalid: user does not exist.</asp:Label>
         </form>
     </body>
 </html>

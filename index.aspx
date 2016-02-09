@@ -22,12 +22,14 @@
                 <br />
                 <asp:TextBox runat="server" ID="inputUsername"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server" ID="reqInputUsername" ControlToValidate="inputUsername" ErrorMessage="* Invalid username."/>
+                <asp:Label runat="server" ID="errorUsername">* Invalid username.</asp:Label>
                 <br /><br />
 
                 <asp:Label runat="server" ID="labelPassword">Password:</asp:Label>
                 <br />
                 <asp:TextBox runat="server" ID="inputPassword"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server" ID="reqInputPassword" ControlToValidate="inputPassword" ErrorMessage="* Invalid password."/>
+                <asp:Label runat="server" ID="errorPassword">* Invalid password.</asp:Label>
                 <br /><br />
 
                 <asp:Button runat="server" ID="buttonRegister" Text="Register" OnClick="onClick_register" CausesValidation="false" />
