@@ -42,8 +42,8 @@
                 <asp:Label runat="server" ID="labelGender">Gender:</asp:Label>
                 <br />
                 <asp:RadioButtonList runat="server" ID="inputGender">
-                    <asp:ListItem>Male</asp:ListItem>
-                    <asp:ListItem>Female</asp:ListItem>
+                    <asp:ListItem Value="Male">Male</asp:ListItem>
+                    <asp:ListItem Value="Female">Female</asp:ListItem>
                 </asp:RadioButtonList>
                 <asp:RequiredFieldValidator runat="server" ID="reqGender" ControlToValidate="inputGender" ErrorMessage="* Please select a gender." />
                 <br />
@@ -97,6 +97,9 @@
                 <asp:Button runat="server" ID="buttonCancel" Text="Cancel" OnClick="onClick_cancel" CausesValidation="false" />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 <asp:Button runat="server" ID="buttonNext" Text="Next" OnClick="onClick_next" />
+                
+                <br /><br />
+                <asp:Button runat="server" ID="buttonFill" Text="FILL" OnClick="onClick_fill" />
             </div>
         </form>
     </body>

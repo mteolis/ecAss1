@@ -25,6 +25,7 @@
                 <br />
                 <br />
                 <br />
+                <asp:Label runat="server" ID="testGender"></asp:Label>
             </div>
         </form>
     </body>

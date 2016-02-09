@@ -14,9 +14,9 @@ public partial class Terms : System.Web.UI.Page
     private String path;
     private OleDbConnection connection = new OleDbConnection();
 
-    private string temp = "temp";
+    //private string temp = "temp";
 
-    private string userName, userPassword, firstName, lastName, dob, phone, streetAddress, city, province, country, zip;
+    private string userName, userPassword, firstName, lastName, gender, dob, phone, streetAddress, city, province, country, zip;
 
 
     protected void Page_Load(object sender, EventArgs e)
@@ -26,20 +26,19 @@ public partial class Terms : System.Web.UI.Page
         connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Server.MapPath("VanierFaces.accdb") + ";Persist Security Info=False;";
         path = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Server.MapPath("VanierFaces.accdb") + ";Persist Security Info=False;";
 
-        /* userName = Session["userName"].ToString();
-         userPassword = Session["userPassword"].ToString();
-         firstName = Session["firstName"].ToString();
-         lastName = Session["lastName"].ToString();
+        userName = Session["userName"].ToString();
+        userPassword = Session["userPassword"].ToString();
+        firstName = Session["firstName"].ToString();
+        lastName = Session["lastName"].ToString();
+        gender = Session["gender"].ToString();
+        dob = Session["dob"].ToString();
+        phone = Session["phoneNumber"].ToString();
+        streetAddress = Session["streetAddress"].ToString();
+        city =  Session["city"].ToString();
+        province = Session["state"].ToString();
+        country = Session["country"].ToString();
+        zip = Session["zip"].ToString();
 
-         //Session["gender"] 
-
-         dob = Session["dob"].ToString();
-         phone = Session["phoneNumber"].ToString();
-         streetAddress = Session["streetAddress"].ToString();
-         city =  Session["city"].ToString();
-         province = Session["p/s"].ToString();
-         country = Session["country"].ToString();
-         zip = Session["zip"].ToString();**/
     }
 
     protected void onClick_decline(object sender, EventArgs e)
@@ -53,7 +52,7 @@ public partial class Terms : System.Web.UI.Page
         conn = new OleDbConnection(path);
         conn.Open();
         cmd = new OleDbCommand("INSERT INTO tblProfiles (user_name, user_password, first_name, last_name, gender, dob, street_address, province, country, zip) "
-            + "VALUES ('" + temp + "', '" + temp + "', '" + temp + "', '" + temp + "', '" + temp + "', '" + temp + "', '" + temp + "', '" + temp + "', '" + temp + "', '" + temp + "')", conn);
+            + "VALUES ('" + userName + "', '" + userPassword + "', '" + firstName + "', '" + lastName + "', '" + gender + "', '" + dob + "', '" + streetAddress + "', '" + province + "', '" + country + "', '" + zip + "')", conn);
         
         reader = cmd.ExecuteReader();
 
