@@ -78,7 +78,8 @@ public partial class myprofile : System.Web.UI.Page
         labelCountry.Visible = true;
         TextBoxCountry.Visible = true;
 
-
+        buttonCancel.Visible = true;
+        buttonSave.Visible = true;
     }
 
     protected void TextBox1_TextChanged(object sender, EventArgs e)
