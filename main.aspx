@@ -34,16 +34,7 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
-            <br />
-
-            <asp:Label runat="server" ID="labelUserProfileView">Enter user whose profile you wish to view:</asp:Label> 
-            <br />
-            <asp:TextBox runat="server" ID="inputUserNavigation"></asp:TextBox>
-            <asp:Button runat="server" ID="buttonNavigate" Text="View Profile" OnClick="onClick_navigate" />
-            <br />
-            <asp:RequiredFieldValidator runat="server" ID="reqUserNavigation" ControlToValidate="inputUserNavigation" ErrorMessage="* Please enter a username." />
-            <br />
-            <asp:Label runat="server" ID="errorUserNotFound">* Invalid: user does not exist.</asp:Label>
+            
         </form>
     </body>
 </html>
