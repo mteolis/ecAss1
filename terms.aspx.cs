@@ -12,7 +12,7 @@ public partial class Terms : System.Web.UI.Page
     private String path;
     private OleDbConnection connection = new OleDbConnection();
 
-    private string username, userPassword, firstName, lastName, gender, dob, phone, streetAddress, city, province, country, zip;
+    private string username, userPassword, firstName, lastName, gender, dob, streetAddress, province, country, zip;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -27,9 +27,7 @@ public partial class Terms : System.Web.UI.Page
         lastName = Session["lastName"].ToString();
         gender = Session["gender"].ToString();
         dob = Session["dob"].ToString();
-        phone = Session["phoneNumber"].ToString();
         streetAddress = Session["streetAddress"].ToString();
-        city =  Session["city"].ToString();
         province = Session["province"].ToString();
         country = Session["country"].ToString();
         zip = Session["zip"].ToString();
@@ -62,10 +60,9 @@ public partial class Terms : System.Web.UI.Page
             MyUserInfoBoxControl.Gender = reader.GetString(4);
             MyUserInfoBoxControl.DOB = reader.GetString(5);
             MyUserInfoBoxControl.StreetAddress = reader.GetString(6);
-            MyUserInfoBoxControl.City = reader.GetString(7);
-            MyUserInfoBoxControl.Province = reader.GetString(8);
-            MyUserInfoBoxControl.Country = reader.GetString(9);
-            MyUserInfoBoxControl.Zip = reader.GetString(10);
+            MyUserInfoBoxControl.Province = reader.GetString(7);
+            MyUserInfoBoxControl.Country = reader.GetString(8);
+            MyUserInfoBoxControl.Zip = reader.GetString(9);
         }
 
         connection.Close();

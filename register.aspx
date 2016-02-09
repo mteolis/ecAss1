@@ -56,22 +56,10 @@
                 <asp:RangeValidator runat="server" ID="validateDOB" ControlToValidate="inputDOB" Type="Date" MinimumValue="1900-01-01" MaximumValue="2020-12-31" ErrorMessage="* Please enter a valid date (YYYY-MM-DD)." />
                 <br />
 
-                <asp:Label runat="server" ID="labelPhone">Phone number:</asp:Label>
-                <br />
-                <asp:TextBox runat="server" ID="inputPhone"></asp:TextBox>
-                <asp:RequiredFieldValidator runat="server" ID="reqInputPhone" ControlToValidate="inputPhone" ErrorMessage="* Please enter a phone number." />
-                <br /><br />
-
                 <asp:Label runat="server" ID="labelStreetAddress">Street address:</asp:Label>
                 <br />
                 <asp:TextBox runat="server" ID="inputStreetAddress"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server" ID="reqInputStreetAddress" ControlToValidate="inputStreetAddress" ErrorMessage="* Please enter a street address." />
-                <br /><br />
-
-                <asp:Label runat="server" ID="labelCity">City:</asp:Label>
-                <br />
-                <asp:TextBox runat="server" ID="inputCity"></asp:TextBox>
-                <asp:RequiredFieldValidator runat="server" ID="reqInputCity" ControlToValidate="inputCity" ErrorMessage="* Please enter a city." />
                 <br /><br />
 
                 <asp:Label runat="server" ID="labelState">Province/State</asp:Label>
