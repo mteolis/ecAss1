@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="terms.aspx.cs" Inherits="Terms" %>
+<%@ Reference Control="~/UserInfoBoxControl.ascx" %>
 
 <!DOCTYPE html>
 
@@ -9,6 +10,7 @@
     <body>
         <form id="form1" runat="server">
             <div>
+                <asp:PlaceHolder runat="server" ID="phUserInfoBox" />
                 <asp:Label runat="server" ID="labelVanierFaces" Font-Bold="true" Font-Size="XX-Large" Font-Underline="true">Vanier Faces</asp:Label>
                 <br /><br />
                 <asp:Label runat="server" ID="labelRegister" Font-Bold="true" Font-Size="X-Large">Terms and Conditions</asp:Label>
