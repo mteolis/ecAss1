@@ -17,8 +17,11 @@ public partial class myprofile : System.Web.UI.Page
     {
         this.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
 
+<<<<<<< HEAD
 
         
+=======
+>>>>>>> fetch_head
         string strSQL = null;
         strSQL = "SELECT user_name, user_password, first_name, last_name, gender, dob, street_address, province, country FROM tblProfiles WHERE user_name = 'Randolph'";
         myConnection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + System.Web.HttpContext.Current.Server.MapPath("VanierFaces.accdb") + ";Persist Security Info=False;");
@@ -47,7 +50,11 @@ public partial class myprofile : System.Web.UI.Page
         OleDbDataReader reader;
         string strSQL = null;
         strSQL = "SELECT user_name, user_password, first_name, last_name, gender, dob, street_address, province, country FROM tblProfiles WHERE user_name ='Randolph'";
+<<<<<<< HEAD
         myCommand = new OleDbCommand(strSQL , myConnection);
+=======
+        myCommand = new OleDbCommand(strSQL, myConnection);
+>>>>>>> fetch_head
         reader = myCommand.ExecuteReader();
         while (reader.Read())
         {
