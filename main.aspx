@@ -30,7 +30,6 @@
                     <asp:ListItem Value="vxdv"></asp:ListItem>
                     <asp:ListItem Value="user1"></asp:ListItem>
                 </asp:BulletedList>
-
             </div>
             <asp:GridView ID="GridViewProfile" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="66px" Width="1264px">
                 <AlternatingRowStyle BackColor="#CCCCCC" />

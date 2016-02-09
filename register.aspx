@@ -97,9 +97,6 @@
                 <asp:Button runat="server" ID="buttonCancel" Text="Cancel" OnClick="onClick_cancel" CausesValidation="false" />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 <asp:Button runat="server" ID="buttonNext" Text="Next" OnClick="onClick_next" />
-                
-                <br /><br />
-                <asp:Button runat="server" ID="buttonFill" Text="FILL" OnClick="onClick_fill" />
             </div>
         </form>
     </body>

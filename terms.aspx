@@ -13,19 +13,18 @@
                 <asp:PlaceHolder runat="server" ID="phUserInfoBox" />
                 <asp:Label runat="server" ID="labelVanierFaces" Font-Bold="true" Font-Size="XX-Large" Font-Underline="true">Vanier Faces</asp:Label>
                 <br /><br />
+
                 <asp:Label runat="server" ID="labelRegister" Font-Bold="true" Font-Size="X-Large">Terms and Conditions</asp:Label>
                 <br /><br />
+
                 <asp:Label runat="server" ID="labelTermsAndConditions">The creators of this website are not responsible for any problems the user may encounter.</asp:Label>
                 <br />
                 <asp:Label runat="server" ID="labelTermsAndConditions1">By clicking the "Accept" button the user is taking full responsibility for anything that happens regardless of the issue.</asp:Label>
                 <br /><br />
+
                 <asp:Button runat="server" ID="buttonDecline" Text="Decline" OnClick="onClick_decline" />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                 <asp:Button runat="server" ID="buttonAccept" Text="Accept" OnClick="onClick_accept" />
-                <br />
-                <br />
-                <br />
-                <asp:Label runat="server" ID="testGender"></asp:Label>
             </div>
         </form>
     </body>
