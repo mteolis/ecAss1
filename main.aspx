@@ -23,7 +23,7 @@
                 <asp:Label runat="server" ID="labelProfileList">Profile List</asp:Label>
                 <br />
             </div>
-            <asp:GridView ID="GridViewProfile" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="66px" Width="1264px">
+            <asp:GridView ID="GridViewProfile" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="60px" Width="1157px">
                 <AlternatingRowStyle BackColor="#CCCCCC" />
                 <FooterStyle BackColor="#CCCCCC" />
                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
