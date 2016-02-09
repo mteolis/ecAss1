@@ -16,24 +16,6 @@ public partial class main : System.Web.UI.Page
     {
         this.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
 
-        /* string connStr = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
-
-         DataTable dt = new DataTable();
-         using (SqlConnection con = new SqlConnection(connStr))
-         {
-             string strQuery = "SELECT * FROM tblProfiles";
-             SqlCommand cmd = new SqlCommand(strQuery);
-             using (SqlDataAdapter sda = new SqlDataAdapter())
-             {
-                 cmd.Connection = con;
-                 con.Open();
-                 sda.SelectCommand = cmd;
-                 sda.Fill(dt);
-                 GridView1.DataSource = dt;
-                 GridView1.DataBind();
-             }
-         }**/
-
         OleDbConnection myConnection = default(OleDbConnection);
         OleDbCommand myCommand = default(OleDbCommand);
         string strSQL = null;
