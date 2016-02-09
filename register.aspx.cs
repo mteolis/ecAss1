@@ -7,7 +7,6 @@ using System.Web.UI.WebControls;
 
 public partial class Register : System.Web.UI.Page
 {
-
     protected void Page_Load(object sender, EventArgs e)
     {
         this.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
@@ -20,7 +19,7 @@ public partial class Register : System.Web.UI.Page
 
     protected void onClick_next(object sender, EventArgs e)
     {
-        Session["userName"] = inputUsername.Text;
+        Session["username"] = inputUsername.Text;
         Session["userPassword"] = inputPassword.Text;
         Session["firstName"] = inputFirstName.Text;
         Session["lastName"] = inputLastName.Text;
@@ -29,7 +28,7 @@ public partial class Register : System.Web.UI.Page
         Session["phoneNumber"] = inputPhone.Text;
         Session["streetAddress"] = inputStreetAddress.Text;
         Session["city"] = inputCity.Text;
-        Session["state"] = inputState.Text;
+        Session["province"] = inputState.Text;
         Session["country"] = inputCountry.Text;
         Session["zip"] = inputZip.Text;
         
