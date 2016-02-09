@@ -12,8 +12,6 @@ public partial class index : System.Web.UI.Page
     private String path;
     private OleDbConnection connection = new OleDbConnection();
 
-    private string username;
-
     protected void Page_Load(object sender, EventArgs e)
     {
         this.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
@@ -51,9 +49,11 @@ public partial class index : System.Web.UI.Page
 
             string comparePassword = cmd.ExecuteScalar().ToString();
 
+            connection.Close();
+
             if (comparePassword == inputPassword.Text)
             {
-                Session["username"] = username;
+                Session["username"] = inputUsername.Text;
                 Server.Transfer("main.aspx");
             }
             else

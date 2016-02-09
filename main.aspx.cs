@@ -40,10 +40,13 @@ public partial class main : System.Web.UI.Page
         GridViewProfile.DataBind();
 
         errorUserNotFound.Visible = false;
+
+        username = Session["username"].ToString();
     }
 
     protected void onClick_profile(object sender, EventArgs e)
     {
+        Session["username"] = username;
         Server.Transfer("myprofile.aspx");
     }
 
@@ -71,6 +74,5 @@ public partial class main : System.Web.UI.Page
         }
         else
             errorUserNotFound.Visible = true;
-        
     }
 }
