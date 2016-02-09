@@ -52,5 +52,25 @@ public partial class main : System.Web.UI.Page
         Server.Transfer("index.aspx");
     }
 
-    
+    protected void onClick_navigate(object sender, EventArgs e)
+    {
+        connection = new OleDbConnection(path);
+        connection.Open();
+
+        cmd = new OleDbCommand("SELECT COUNT(*) FROM tblProfiles WHERE user_name = '" + inputUserNavigation.Text + "';", connection);
+        cmd.ExecuteNonQuery();
+
+        int compareUsername = Convert.ToInt32(cmd.ExecuteScalar().ToString());
+
+        connection.Close();
+
+        if (compareUsername == 1)
+        {
+            Session["username"] = username;
+            Server.Transfer("user.aspx");
+        }
+        else
+            errorUserNotFound.Visible = true;
+        
+    }
 }
